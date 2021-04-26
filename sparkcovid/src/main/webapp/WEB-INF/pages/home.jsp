@@ -96,6 +96,7 @@ li a:hover:not(.active) {
         var area = map.dataProvider.areas[i];
         if (area.showAsSelected) {
           states.push(area.title);
+          document.selected.selectedStates.value = states
         }
       }
     });
@@ -105,7 +106,26 @@ li a:hover:not(.active) {
 
     map.write("chartdiv");
   });  
+  
+  
+  
   </script>
+  
+  <body>
+      <form name = "selected">
+         <input type = "text" name = "selectedStates" size = "20" />
+      </form>
+  <form action="/action_page.php">
+  <label for="Name">Name of the passenger :</label>
+  <input type="text" id="Name" name="passengerName"><br><br>
+  <label for="Source">Source location:</label>
+  <input type="text" id="source" name="sourceLocation"><br><br>
+  <label for="Destination">Destination location:</label>
+  <input type="text" id="destination" name="destLocation"><br><br>
+   <label for="Symptoms">Symptoms :</label>
+  <input type="text" id="symptoms" name="symptoms"><br><br>
+  <input type="submit" value="Submit">
+</form>
 
 </body>
 </html>
