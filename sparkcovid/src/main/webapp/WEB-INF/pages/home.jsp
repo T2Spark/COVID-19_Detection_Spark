@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>W3.CSS Template</title>
+<title>Team 2</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -54,7 +54,7 @@ body {font-size:16px;}
     <h1 class="w3-xxxlarge w3-text-red"><b>How is this site useful?</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>We provide you with risk analysis of travelling in India during the pandemic</p>
-    <p>We provide you the probability that you will contract COVID-19 while travelling through India based on up to date information gathered from various internet sources </p>
+    <p>We help you calculate the probability that you will contract COVID-19 while travelling through India based on up to date information gathered from various internet sources </p>
   </div>
   
   <!-- Photo grid (modal) -->
