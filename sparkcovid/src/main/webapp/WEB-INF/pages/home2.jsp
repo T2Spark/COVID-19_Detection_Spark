@@ -24,8 +24,7 @@ body {font-size:16px;}
 <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
   <div class="w3-container">
-    <h3 class="w3-padding-64"><b>Covid-19<br>Risk<br>Calculator</b></h3>
-    <hr style="width:50px;border:5px solid white" class="w3-round">
+    <h3 class="w3-padding-64"><b>Company<br>Name</b></h3>
   </div>
   <div class="w3-bar-block">
     <a href="#useful" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
