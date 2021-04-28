@@ -51,9 +51,10 @@ body {font-size:16px;}
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px; height:600px" id="useful">
     <h1 class="w3-jumbo"><b>Covid Risk Prediction</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>How is this site useful? </b></h1>
+    <%String s= "Tamil Nadu"; %>
+    <h1 class="w3-xxxlarge w3-text-red"><b>How is this site useful? ${map.DL}} </b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>We provide you with risk analysis of travelling in India during the pandemic</p>
+    <p>We provide you with risk analysis of travelling in India during the pandemic ${map.TN}</p>
     <p>We help you calculate the probability that you will contract COVID-19 while travelling through India based on up to date information gathered from various internet sources </p>
   </div>
   

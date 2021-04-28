@@ -29,7 +29,7 @@ public class getData {
 		Dataset<Row> dataset = spark.read().option("header", true).csv("C:\\Users\\User\\Desktop\\test\\COVID-19_Detection_Spark\\sparkcovid\\src\\main\\resources\\state_wise_pop.csv");
 		
 		dataset.createOrReplaceTempView("table1");
-		dataset = spark.sql("select State, Confirmed, Recovered, Deaths, Active, Population from table1");				//change states to state code
+		dataset = spark.sql("select State_code, Confirmed, Recovered, Deaths, Active, Population from table1");				//change states to state code
 		
 		spark.udf().register("checkProb",(String active, String pop)->{
 			
