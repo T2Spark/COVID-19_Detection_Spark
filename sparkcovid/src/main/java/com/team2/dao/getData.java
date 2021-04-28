@@ -19,7 +19,7 @@ import java.util.Map;
 
 public class getData {
 	
-	public static Map<String,Double> getData() {
+	public static String getProbab() {
 		
 		Logger.getLogger("org.apache").setLevel(Level.WARN);
 		SparkSession spark = SparkSession.builder().appName("testingSql").master("local[*]")
@@ -38,28 +38,22 @@ public class getData {
 		
 		dataset = dataset.withColumn("Probability", callUDF("checkProb", col("Confirmed"), col("Population")));
 		
-
-		Map<String, Double> probability= new HashMap<>();
 		dataset = dataset.drop("Recovered", "Deaths", "Active", "Confirmed", "Population");
 		
-		
-List<Row> list = dataset.collectAsList();
-		
+		List<Row> list = dataset.collectAsList();
 		
 		Iterator<Row> currRow = list.iterator();
 
-		
+		String s=new String();
 		while(currRow.hasNext()) {
 			Row cur =currRow.next();
 			String k=(String) cur.get(0);
 			Double v=(Double) cur.get(1);
-			
-			probability.put(k, v);
+			s=s.concat(k+"|"+String.format("%.3f", v)+"*");
 			
 		}
 				
-		
-		return probability;
+		return s;
 			
 	}
 	
